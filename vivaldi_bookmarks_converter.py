@@ -14,13 +14,16 @@ def generate(e: dict):
     ty = e['type']
     if ty == 'url':
         a = E.Element('a', attrib={'href': e['url'],
-                                   'add_date': '0',
-                                   'last_modified': '0'})
+                                   #    'add_date': '0',
+                                   #    'last_modified': '0'
+                                   })
         a.text = e['name']
         return '<DT>'+E.tostring(a, encoding='unicode')+'\n'
     elif ty == 'folder':
         header = E.Element(
-            'h3', attrib={'add_date': '0', 'last_modified': '0'})
+            'h3',
+            # attrib={'add_date': '0', 'last_modified': '0'}
+        )
         header.text = e['name']
         content = '<DT>' +\
             E.tostring(header, encoding='unicode') +\
