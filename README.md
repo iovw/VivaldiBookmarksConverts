@@ -13,7 +13,7 @@ Convert vivaldi browser bookmakets to firefox bookmarkets format.
 pipenv install
 ```
 
-## how to Run
+## How to Run
 
 usage: vivaldi_bookmarks_converter.py [-h] -f FILE [-o OUT]
 
